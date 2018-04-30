@@ -9,7 +9,7 @@ ENV app_home /var/www
 
 ADD . ${app_home}
 
-WORKDIR ${app_name}
+WORKDIR ${app_home}
 
 RUN composer install
 
