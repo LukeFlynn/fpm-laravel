@@ -17,12 +17,11 @@ RUN apt-get install -y php7.2-json
 RUN apt-get install -y php7.2-opcache
 
 RUN php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');"
-RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=compose
+RUN php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
 RUN mkdir -p /run/php
 
 ADD nginx.conf /etc/nginx/nginx.conf
-ADD test.html /var/www/public/index.php
 
 CMD php-fpm7.2 && nginx -g "daemon off;"
 
