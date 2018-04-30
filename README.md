@@ -2,7 +2,7 @@
 
 ### Usage:
 
-```
+```Dockerfile
 FROM lukehflynn/fpm-laravel:latest
 
 ENV app_home /var/www
